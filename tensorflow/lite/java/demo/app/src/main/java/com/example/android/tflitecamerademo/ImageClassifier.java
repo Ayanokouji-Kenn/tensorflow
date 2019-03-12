@@ -270,6 +270,7 @@ public abstract class ImageClassifier {
         span.setSpan(new RelativeSizeSpan(sizeScale), 0, span.length(), 0);
       }
       span.setSpan(new ForegroundColorSpan(color), 0, span.length(), 0);
+      // sortedLables 本来是概率高的在最后，遍历的时候，插入0索引处，最终的结果就被反转了。
       builder.insert(0, span);
     }
   }

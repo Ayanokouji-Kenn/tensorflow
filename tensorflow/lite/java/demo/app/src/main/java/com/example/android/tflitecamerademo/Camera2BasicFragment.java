@@ -516,6 +516,7 @@ public class Camera2BasicFragment extends Fragment
         }
 
         // // For still image captures, we use the largest available size.
+        //摄像头可能提供多种分辨率的照片，此处是选择了最大的分辨率。
         Size largest =
             Collections.max(
                 Arrays.asList(map.getOutputSizes(ImageFormat.JPEG)), new CompareSizesByArea());
